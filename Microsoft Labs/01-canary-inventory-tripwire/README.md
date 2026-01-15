@@ -53,14 +53,16 @@ DeviceLogonEvents
 
 MDE Detection rules to confirm access of file “network_layout.pdf” from alert.
 
+```kql
 DeviceProcessEvents
 | where ProcessCommandLine has @"C:\Users\Public\Inventory\network_layout.pdf"
    or ProcessCommandLine has "canarytokens.com"
 | project Timestamp, DeviceName, AccountName, FileName, ProcessCommandLine
 | order by Timestamp asc
-
+```
 
 <img width="1277" height="328" alt="image" src="https://github.com/user-attachments/assets/22647d3c-0d7e-4476-8247-7df075936683" />
+
 
 
 
