@@ -48,8 +48,7 @@ DeviceLogonEvents
 | where DeviceName contains "win-11-v"
 | project Timestamp, DeviceId, AccountName, LogonType, ActionType, RemoteIP
 
-<img width="900" height="105" alt="Logon Activity" src="https://github.com/user-attachments/assets/eeb5823a-f275-4d5c-9e96-e3db31ec724b" />
-
+<img width="1512" height="239" alt="image" src="https://github.com/user-attachments/assets/7b3414b8-36ce-4a7b-b6db-ce250eeb3cff" />
 
 MDE Detection rules to confirm access of file “network_layout.pdf” from alert.
 
@@ -61,6 +60,7 @@ DeviceProcessEvents
 
 
 <img width="1277" height="328" alt="image" src="https://github.com/user-attachments/assets/22647d3c-0d7e-4476-8247-7df075936683" />
+
 
 
 
