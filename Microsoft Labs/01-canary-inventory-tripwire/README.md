@@ -1,3 +1,5 @@
+## Overview
+
 This lab simulates a realistic Windows 11 shared folder that contains sensitive-looking documentation. A Canarytokens **Fake File System** token was deployed to detect unauthorized access and generate a high-signal alert.
 
 This Windows VM is monitored using **Microsoft Defender for Endpoint (MDE)** to validate logon activity and endpoint process evidence.
@@ -27,6 +29,7 @@ DeviceProcessEvents
 
 
 <img width="900" height="141" alt="confirm acess of file" src="https://github.com/user-attachments/assets/d3fe20d9-2834-45af-ba47-8c010012a179" />
+
 
 
 
