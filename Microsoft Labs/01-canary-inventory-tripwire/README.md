@@ -28,6 +28,7 @@ Contents:
 - `Mac Addresses` (doc) 
 - `network_layout.pdf` (high-value bait)
 
+<img width="1136" height="626" alt="image" src="https://github.com/user-attachments/assets/f1918058-110f-4f80-997f-37d1738c9142" />
 
 
 ## 🚨 Alert Details (Canarytokens)
@@ -60,6 +61,7 @@ DeviceProcessEvents
 
 
 <img width="900" height="141" alt="confirm acess of file" src="https://github.com/user-attachments/assets/d3fe20d9-2834-45af-ba47-8c010012a179" />
+
 
 
 
