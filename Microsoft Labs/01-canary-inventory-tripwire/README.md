@@ -80,6 +80,7 @@ Figure 2: Canarytokens callout initiated by Edge
 <img width="1133" height="340" alt="image" src="https://github.com/user-attachments/assets/2e175e7a-c5f7-49f1-b5e9-2ac7a8664c96" />
 
 
+Logs can be noisy with brute force attempts. Deception tripwires are high signal and Touching files such as these suggests real intent 
 
 
 
