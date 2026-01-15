@@ -42,7 +42,7 @@ Contents:
 
 MDE Investigation
 
-Detection Rule to establish logon activity
+Hunting Query to establish logon activity
 
 ```kql
 DeviceLogonEvents 
@@ -51,17 +51,22 @@ DeviceLogonEvents
 ```
 <img width="1512" height="239" alt="image" src="https://github.com/user-attachments/assets/7b3414b8-36ce-4a7b-b6db-ce250eeb3cff" />
 
-MDE Detection rules to confirm access of file “network_layout.pdf” from alert.
+Confirmed successful logon activity for account tug-adm and remote IP 10.0.8.6.
+
+
+Hunting Query to confirm PDF access + canary correlation to confirm access of file “network_layout.pdf” from alert.
 
 ```kql
 DeviceProcessEvents
+| where DeviceName contains "win-11-v"
 | where ProcessCommandLine has @"C:\Users\Public\Inventory\network_layout.pdf"
    or ProcessCommandLine has "canarytokens.com"
 | project Timestamp, DeviceName, AccountName, FileName, ProcessCommandLine
 | order by Timestamp asc
 ```
-
+Confirmed msedge.exe opened network_layout.pdf and initiated the Canarytokens callout.
 <img width="1277" height="328" alt="image" src="https://github.com/user-attachments/assets/22647d3c-0d7e-4476-8247-7df075936683" />
+
 
 
 
