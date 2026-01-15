@@ -53,6 +53,7 @@ DeviceLogonEvents
 
 <img width="1471" height="240" alt="image" src="https://github.com/user-attachments/assets/2ef1e87f-8835-4ccf-93a0-5efe5e87b923" />
 
+<img width="1471" height="240" alt="image" src="https://github.com/user-attachments/assets/33abe22f-a62b-40b6-afa8-e0f3a2235cda" />
 
 
 Confirmed successful logon activity for account tug-adm and remote IP 10.0.8.6.
@@ -70,6 +71,7 @@ DeviceProcessEvents
 ```
 Confirmed msedge.exe opened network_layout.pdf and initiated the Canarytokens callout.
 <img width="1277" height="328" alt="image" src="https://github.com/user-attachments/assets/22647d3c-0d7e-4476-8247-7df075936683" />
+
 
 
 
