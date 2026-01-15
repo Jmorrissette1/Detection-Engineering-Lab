@@ -55,7 +55,7 @@ DeviceLogonEvents
 <img width="1471" height="240" alt="image" src="https://github.com/user-attachments/assets/33abe22f-a62b-40b6-afa8-e0f3a2235cda" />
 
 
-Confirmed successful logon activity for account tug-adm and remote IP 10.0.8.6.
+Confirmed successful logon activity for account XXXX and remote IP 10.0.8.6.
 
 
 Hunting Query to confirm PDF access + canary correlation to confirm access of file “network_layout.pdf” from alert.
@@ -78,6 +78,7 @@ Figure 1: PDF opened from Public Inventory
 Figure 2: Canarytokens callout initiated by Edge
 
 <img width="1133" height="340" alt="image" src="https://github.com/user-attachments/assets/2e175e7a-c5f7-49f1-b5e9-2ac7a8664c96" />
+
 
 
 
