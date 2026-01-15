@@ -1,4 +1,4 @@
-# 🪤 Windows Canary Tripwire (MDE Investigation) — Public Inventory Folder
+# Windows Canary Tripwire (MDE Investigation) — Public Inventory Folder
 
 ## Overview
 
@@ -11,13 +11,13 @@ Detect and investigate suspicious access to internal documentation (recon behavi
 
 `C:\Users\Public\Inventory`
 
-## 🧱 Lab Setup
+## Lab Setup
 - **Endpoint:** Windows 11 VM (`win-11-v`)
 - **Remote Access:** Guacamole RDP
 - **Detection Source:** Canarytokens (email alert)
 - **Investigation Platform:** Microsoft Defender for Endpoint (MDE)
 
-## 📁 Deception Folder Structure
+## Deception Folder Structure
 Path:
 `C:\Users\Public\Inventory`
 
@@ -31,7 +31,7 @@ Contents:
 <img width="1136" height="626" alt="image" src="https://github.com/user-attachments/assets/f1918058-110f-4f80-997f-37d1738c9142" />
 
 
-## 🚨 Alert Details (Canarytokens)
+## Alert Details (Canarytokens)
 - **Time of alert:** 2026-01-15 17:50 UTC (21:50 PST)
 - **Token Type:** Windows Fake File System
 - **Source IP:** 52.167.104.156
@@ -44,10 +44,11 @@ MDE Investigation
 
 Detection Rule to establish logon activity
 
-DeviceLogonEvents
+```kql
+DeviceLogonEvents 
 | where DeviceName contains "win-11-v"
 | project Timestamp, DeviceId, AccountName, LogonType, ActionType, RemoteIP
-
+```
 <img width="1512" height="239" alt="image" src="https://github.com/user-attachments/assets/7b3414b8-36ce-4a7b-b6db-ce250eeb3cff" />
 
 MDE Detection rules to confirm access of file “network_layout.pdf” from alert.
@@ -60,6 +61,7 @@ DeviceProcessEvents
 
 
 <img width="1277" height="328" alt="image" src="https://github.com/user-attachments/assets/22647d3c-0d7e-4476-8247-7df075936683" />
+
 
 
 
