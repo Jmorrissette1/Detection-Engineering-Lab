@@ -28,7 +28,10 @@ index=winlogs sourcetype=XmlWinEventLog EventCode=4625 earliest=-60m (user="bsch
 
 4) **Splunk 4624 successful logon**
    - shows access occurred
-
+   
+index=winlogs sourcetype=XmlWinEventLog EventCode=4624 earliest=-60m (user="bschultz" OR user="*\\bschultz")
+| stats count as successful_logons by user, host, LogonType
+| sort - successful_logons
 <img width="2545" height="567" alt="image" src="https://github.com/user-attachments/assets/b341ccca-d88b-4885-8a5c-adb9b01e2de1" />
 
 
@@ -46,6 +49,7 @@ index=winlogs sourcetype=XmlWinEventLog earliest=-60m (EventCode=4624 OR EventCo
    - redacted token ID + URL
 
 <img width="493" height="747" alt="image" src="https://github.com/user-attachments/assets/06bc599c-4f44-4db4-b0fe-63c0163a9aa9" />
+
 
 
 
