@@ -32,8 +32,10 @@ Decoy:
 
 1) **Inventory folder setup**
    - `C:\Users\bschultz\Documents\Assets` showing bait file(s)
-
+     
 <img width="1123" height="592" alt="image" src="https://github.com/user-attachments/assets/4a3ff543-cf2a-495c-8d61-849795a5a7e6" />
+
+
 
 2) **Splunk failed logons spike chart**
    - `timechart` for 4625
@@ -91,6 +93,7 @@ Evidence: Successful logon observed (EventCode 4624) for bschultz after failures
 
 T1005 - Data from Local System
 Evidence: Canary tripwire triggered when network_layout.pdf was accessed
+
 
 
 
