@@ -105,6 +105,49 @@ Findings (Evidence-Based)
 
 -The Canarytokens tripwire triggered when network_layout.pdf was accessed, confirming post-authentication intent.
 
+##  Remediation Recommendations
+
+Based on the observed pattern (**4625 brute-force attempts → 4624 successful logon → deception trigger**), the following controls would reduce risk and improve detection:
+
+### 1) Account Lockout Policy (AD / GPO)
+Implement an account lockout policy to slow or stop brute-force attempts:
+
+- **Account lockout threshold:** 5 invalid logon attempts  
+- **Account lockout duration:** 15 minutes  
+- **Reset account lockout counter after:** 15 minutes  
+
+Goal: prevent repeated guessing and reduce chance of compromise.
+
+---
+
+### 2) Conditional Access / Access Hardening (If Applicable)
+If remote authentication is possible in a real environment, restrict access paths:
+
+- Require VPN for admin/remote access
+- Restrict inbound authentication sources
+- Limit RDP/SMB exposure
+
+Goal: reduce attack surface and limit authentication attempts to trusted paths.
+
+---
+
+### 3) Detection & Alerting Improvements
+Add detections that prioritize high-risk authentication behavior:
+
+- Alert on **high volume of 4625 failures** for one account within a short time window
+- Alert on **4624 success after repeated 4625 failures** (high confidence compromise indicator)
+
+Goal: improve SOC visibility for early investigation and response.
+
+---
+
+### 4) Deception Controls (Canarytokens)
+Continue using deception artifacts to confirm intent:
+
+- Place decoy documents in realistic user-accessible paths
+- Monitor for access to “high-value bait” files (network diagrams, password sheets, asset lists)
+
+Goal: increase detection confidence and reduce false positives.
 
 
 MITRE ATT&CK Mapping
