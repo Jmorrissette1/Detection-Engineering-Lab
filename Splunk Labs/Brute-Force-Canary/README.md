@@ -1,5 +1,4 @@
 
-Use these **6 screenshots** and your report will read perfectly:
 
 1) **Inventory folder setup**
    - `C:\Users\bschultz\Documents\Assets` showing bait file(s)
@@ -61,6 +60,7 @@ Evidence: Successful logon observed (EventCode 4624) for bschultz after failures
 
 T1005 - Data from Local System
 Evidence: Canary tripwire triggered when network_layout.pdf was accessed
+
 
 
 
