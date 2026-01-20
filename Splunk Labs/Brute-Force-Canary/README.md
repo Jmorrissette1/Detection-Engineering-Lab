@@ -7,6 +7,11 @@ This lab simulates a focused brute-force attack against a single Active Director
 The investigation was performed in Splunk using Windows event telemetry.
 
 
+## Objective
+Detect and validate the authentication attack chain:
+
+**4625 Failed Logons → 4624 Successful Logon → Canary Trigger**
+
 1) **Inventory folder setup**
    - `C:\Users\bschultz\Documents\Assets` showing bait file(s)
 
@@ -68,6 +73,7 @@ Evidence: Successful logon observed (EventCode 4624) for bschultz after failures
 
 T1005 - Data from Local System
 Evidence: Canary tripwire triggered when network_layout.pdf was accessed
+
 
 
 
