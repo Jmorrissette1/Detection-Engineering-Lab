@@ -43,7 +43,7 @@ Contents:
 ## Alert Details (Canarytokens)
 - **Time of alert:** 2026-01-15 17:50 UTC (21:50 PST)
 - **Token Type:** Windows Fake File System
-- **Source IP:** 52.X.X.X
+- **Source IP:** 192.X.X.X
 - **File accessed:** `network_layout.pdf`
 - **Opened by:** `msedge.exe`
 
@@ -107,6 +107,7 @@ Evidence: Successful logon observed (EventCode 4624) for bschultz after failures
 
 T1005 - Data from Local System
 Evidence: Canary tripwire triggered when network_layout.pdf was accessed
+
 
 
 
