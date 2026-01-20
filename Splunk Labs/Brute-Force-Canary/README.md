@@ -1,5 +1,23 @@
 
+Use these **6 screenshots** and your report will read perfectly:
 
+1) **Inventory folder setup**
+   - `C:\Users\Public\Inventory` showing bait file(s)
+
+2) **Splunk failed logons spike chart**
+   - `timechart` for 4625
+
+3) **Splunk 4625 table targeting bschultz**
+   - failed_logons count
+
+4) **Splunk 4624 successful logon**
+   - shows access occurred
+
+5) **Splunk correlation table**
+   - failures + successes side by side
+
+6) **Canarytokens alert email**
+   - redacted token ID + URL
 
 
 <img width="1123" height="592" alt="image" src="https://github.com/user-attachments/assets/4a3ff543-cf2a-495c-8d61-849795a5a7e6" />
@@ -39,4 +57,5 @@ index=winlogs sourcetype=XmlWinEventLog earliest=-60m (EventCode=4624 OR EventCo
 
 
 <img width="493" height="747" alt="image" src="https://github.com/user-attachments/assets/06bc599c-4f44-4db4-b0fe-63c0163a9aa9" />
+
 
