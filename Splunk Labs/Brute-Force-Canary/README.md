@@ -53,7 +53,16 @@ Contents:
 
 # Splunk Investigation
 
-## 1) Failed Logons (4625) — Brute Force Evidence
+## 1) Failed Logons (4625) — Spike Over Time
+```spl
+index=winlogs earliest=-72h ("EventCode=4625" OR "Event ID: 4625" OR "4625")
+| timechart span=15m count as failed_logons
+```
+
+<img width="1592" height="423" alt="image" src="https://github.com/user-attachments/assets/50a7b811-e922-4e23-bc81-db21c6685ab0" />
+
+
+## 2) Failed Logons (4625) — Brute Force Evidence
 SPL Query to Establish EventCode= 4625 (Failed Logon Activity) to confirm eveidence of a brute force. 
     
 ```spl    
@@ -64,7 +73,7 @@ index=winlogs sourcetype=XmlWinEventLog EventCode=4625 earliest=-60m
 <img width="1433" height="429" alt="image" src="https://github.com/user-attachments/assets/efb03471-bdd0-417b-9cb6-ac164a61cabb" />
 
 
-## 2) Failed Logons (4625) Victim Account Evidence
+## 3) Failed Logons (4625) Victim Account Evidence
 
 SPL Query to Establish EventCode= 4625 (Failed Logon Activity) counts
    
@@ -76,7 +85,7 @@ index=winlogs sourcetype=XmlWinEventLog EventCode=4625 earliest=-60m (user="bsch
 
 <img width="1443" height="432" alt="image" src="https://github.com/user-attachments/assets/ce5744f5-1d20-41b0-99b8-d06b6ca7f36e" />
 
-## 3) Successful Logons (4624) — Access Confirmed
+## 4) Successful Logons (4624) — Access Confirmed
 SPL Query to Establish EventCode= 4624 (Successful Logon Activity) 
 
 ```spl
@@ -85,7 +94,7 @@ index=winlogs sourcetype=XmlWinEventLog EventCode=4624 earliest=-60m (user="bsch
 | sort - successful_logons
 <img width="2545" height="567" alt="image" src="https://github.com/user-attachments/assets/b341ccca-d88b-4885-8a5c-adb9b01e2de1" />
 ```
-## 4) Failures vs Success Correlation (4625 + 4624)
+## 5) Failures vs Success Correlation (4625 + 4624)
 SPL Query to show failures and succcesses side by side.
 
 ```spl
@@ -163,6 +172,7 @@ Evidence: Successful logon observed (EventCode 4624) for bschultz after failures
 T1005 - Data from Local System
 Evidence: Canary tripwire triggered when network_layout.pdf was accessed
 ```
+
 
 
 
